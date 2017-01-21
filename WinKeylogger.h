@@ -28,15 +28,15 @@ extern "C" {
 #endif
 
 
-#include <windef.h> //size_t, wchar_t
+#include <windows.h> //size_t, wchar_t, BOOL
 
 #define WINKEYLOGGER_BUFSIZ 255
 
-int StartWinKeylogger(void);
+BOOL StartWinKeylogger( void );
 void RemoveWinKeylogger(void);
-int LogNextKeystroke(size_t *buff_len);
-int StrCmpInputBuffer(wchar_t *szBuff);
-void StrCpyLoggedBuffer(wchar_t *szBuff);
+BOOL LogNextKeystroke( size_t *buff_len );
+BOOL StrCmpInputBuffer( wchar_t *szBuff );
+void StrCpyLoggedBuffer( wchar_t *szBuff );
 
 #ifdef __cplusplus
 }

@@ -1,5 +1,4 @@
 #include "WinKeylogger.h"
-#include <windows.h>
 #include <stdio.h>
 
 int APIENTRY WinMain(
